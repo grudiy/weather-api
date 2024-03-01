@@ -6,10 +6,21 @@
 </head>
 <body>
 <h1>Weather Data API</h1>
-<h3>URL format: </h3>
+<h3>Get temperature for a station for date:</h3>
 <p>{domain}/api/v1/station/date</p>
-<h3>URL example:</h3>
-<p><a href = "/api/v1/10/1988-10-25">/api/v1/10/1988-10-25</a></p>
+<p>URL example:
+<a href = "/api/v1/10/1988-10-25">/api/v1/10/1988-10-25</a></p>
+
+<h3>Get all data for a station:</h3>
+<p>{domain}/api/v1/station</p>
+<p>URL example:
+<a href = "/api/v1/10">/api/v1/10</a></p>
+
+<h3>Get temperature for all year for a station:</h3>
+<p>{domain}/api/v1/annual/station/year</p>
+<p>URL example:
+<a href = "/api/v1/annual/10/1988">/api/v1/annual/10/1988</a></p>
+
 <h3>Stations List:</h3>
 {{data|safe}}
 </body>
