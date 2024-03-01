@@ -3,11 +3,12 @@ import pandas as pd
 
 app = Flask(__name__)
 
-
+stations = pd.read_csv("data/stations.txt", skiprows=17)
+stations = stations[["STAID", "STANAME                                 "]][:16].to_html()
 @app.route("/")
 # Decorator
 def home():
-    return render_template("home.html")
+    return render_template("home.html", data=stations)
 
 
 @app.route("/api/v1/<station>/<date>")
